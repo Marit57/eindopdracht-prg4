@@ -1,6 +1,10 @@
 import '../css/style.css'
 import { Actor, Engine, Vector, DisplayMode } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
+import { Background } from './background.js'
+import { Dobber } from './dobber.js'
+import { Steiger } from './steiger.js'
+import { Fish } from './fish.js'
 
 export class Game extends Engine {
 
@@ -15,17 +19,15 @@ export class Game extends Engine {
     }
 
     startGame() {
-        console.log("start de game!")
-        const fish = new Actor()
-        fish.graphics.use(Resources.Fish.toSprite())
-        fish.pos = new Vector(500, 300)
-        fish.vel = new Vector(-10,0)
-        fish.events.on("exitviewport", (e) => this.fishLeft(e))
-        this.add(fish)
-    }
+        const bg = new Background();
+        this.add(bg);
 
-    fishLeft(e) {
-        e.target.pos = new Vector(1350, 300)
+        this.add(new Steiger());
+        this.add(new Dobber());
+
+        for (let i = 0; i < 5; i++) {
+        this.add(new Fish());
+        }
     }
 }
 
