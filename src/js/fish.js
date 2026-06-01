@@ -13,6 +13,11 @@ export class Fish extends Actor {
         Resources.Clownfish.toSprite(),
         Resources.Catfish.toSprite(),
         Resources.RainbowTrout.toSprite(),
+        Resources.Surgeonfish.toSprite(),
+        Resources.Bass.toSprite(),
+        Resources.Anchovy.toSprite(),
+        Resources.Angelfish.toSprite(),
+        Resources.Pufferfish.toSprite()
     ];
 
     const randomIndex = Math.floor(Math.random() * fishes.length);
