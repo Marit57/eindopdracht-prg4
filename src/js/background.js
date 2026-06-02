@@ -5,6 +5,6 @@ export class Background extends Actor {
     constructor() {
         super();
         this.graphics.use(Resources.BG.toSprite());
-        this.pos = new Vector(650, 500);
+        this.anchor = new Vector(0,0)
     }
 }

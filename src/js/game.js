@@ -25,7 +25,7 @@ export class Game extends Engine {
         this.add(new Steiger());
         this.add(new Dobber());
 
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 7; i++) {
         this.add(new Fish());
         }
     }
