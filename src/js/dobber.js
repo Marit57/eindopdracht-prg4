@@ -84,12 +84,12 @@ export class Dobber extends Actor {
         // Geef worp-snelheid (parabool)
         this.body.vel = new Vector(200, -600);
 
-        // Na 0.6 sec terug naar normale sprite
+        //sprite in het water
         this.scene.engine.clock.schedule(() => {
             this.graphics.use(Resources.ThrownDobber.toSprite());
         }, 600);
 
-        // Na 1 sec dobber weer laten drijven
+        // Na 1 sec worp is klaar, gravity gaat weer
         this.scene.engine.clock.schedule(() => {
             this.body.useGravity = false;
             this.body.vel = new Vector(0, 0);
